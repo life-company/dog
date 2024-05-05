@@ -29,17 +29,20 @@
     </header>
     <main>
         <section class="container">
-            <h1 class="h4 text-center my-3">里親探し中</h1>
-            <div class="row">
-                <div class="card col-md-3 col-xs-6" style="width: 18rem;">
-                <img src="#" class="card-img-top" alt="#">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+            <h1 class="h4 text-center my-3">里親探し中のワンチャンが沢山います</h1>
+            <div class="row m-auto">
+                @forelse ($dogs as $dog)
+                    <div class="card col-md-3 col-xs-6 ms-auto me-auto mb-5 p-0" style="width: 18rem;">
+                        <img src="{{ $dog->imageUrl }}" class="card-img-top" alt="{{ $dog->title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $dog->title }} / {{ $dog->petLimitDate }}</h5>
+                            <p class="card-text">{{ $dog->petSubCategory }} / {{ $dog->petSex }} / {{ $dog->petArea }}</p>
+                            <a href="{{ $dog->link }}" class="btn btn-primary">ワンちゃんの詳細を見る</a>
+                        </div>
+                    </div>
+                @empty
+                    <p>現在里親を探しているワンちゃんはいないみたいです。</p>
+                @endforelse
             </div><!-- /.row -->
         </section>
     </main>

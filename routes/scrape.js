@@ -4,6 +4,17 @@ import axios from 'axios';
 
 // POSTリクエストを送信する関数
 async function postListingToAPI(listing) {
+
+  const postData = {
+    title: listing.title,
+    link: listing.link,
+    imageUrl: listing.imageUrl,
+    petSubCategory: listing.petSubCategory,
+    petSex: listing.petSex,
+    petArea: listing.petArea,
+    petLimitDate: listing.petLimitDate
+  };
+
   try {
     console.log(listing);
     const response = await axios.post('http://127.0.0.1:8000/api/dogs_create', listing);
