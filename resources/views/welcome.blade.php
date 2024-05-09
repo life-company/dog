@@ -21,8 +21,8 @@
                         @endif
                     @endauth
                 @endif
-                <li class="nav-item"><a class="nav-link" href="#">お知らせ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">サイト利用ガイド</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#">お知らせ</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="/terms-of-service">利用規約</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">お問い合わせ</a></li>
             </ul>
         </nav>

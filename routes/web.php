@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', [DogController::class, 'index']);
+Route::get('/terms-of-service', [DogController::class, 'terms']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

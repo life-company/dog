@@ -17,6 +17,11 @@ class DogController extends Controller
         return view('welcome', compact('dogs'));
     }
 
+    public function terms()
+    {
+        return view('terms');
+    }
+
     /**
      * Store a newly created resource in storage.
      */
